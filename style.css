@@ -200,6 +200,18 @@ section .title::after {
   color: crimson;
   font-weight: 500;
 }
+.home .home-content .home-tagline {
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 620px;
+  margin: 16px 0 6px;
+  color: rgba(255, 255, 255, 0.85);
+}
+.home .home-content .home-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
 .home .home-content a {
   display: inline-block;
   background: crimson;
@@ -215,6 +227,16 @@ section .title::after {
 .home .home-content a:hover {
   color: crimson;
   background: none;
+}
+.home .home-content a.home-secondary {
+  background: transparent;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.65);
+}
+.home .home-content a.home-secondary:hover {
+  background: #fff;
+  color: crimson;
+  border-color: #fff;
 }
 
 /* about section styling */
@@ -243,6 +265,48 @@ section .title::after {
 }
 .about .about-content .right p {
   text-align: justify;
+}
+.about .about-content .right .tech-stack {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.about .about-content .right .tech-group h4 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2a2a;
+  margin-bottom: 12px;
+  letter-spacing: 0.2px;
+}
+.about .about-content .right .tech-group h4 i {
+  color: crimson;
+  font-size: 16px;
+}
+.about .about-content .right .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.about .about-content .right .tech-tags span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f4f4f6;
+  border: 1px solid #e3e3e8;
+  transition: all 0.25s ease;
+  cursor: default;
+}
+.about .about-content .right .tech-tags span:hover {
+  color: #fff;
+  background: crimson;
+  border-color: crimson;
+  transform: translateY(-2px);
 }
 .about .about-content .right a {
   display: inline-block;
