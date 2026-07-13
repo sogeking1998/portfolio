@@ -85,109 +85,102 @@ $(".menu-btn").click(function () {
   });
 });
 
+// ---- My Work: category filters + per-project gallery ----
 document.addEventListener("DOMContentLoaded", () => {
-  // Create fullscreen overlay element
-  const fullscreenOverlay = document.createElement("div");
-  fullscreenOverlay.classList.add("portfolio-fullscreen-overlay");
+  const cards = Array.from(document.querySelectorAll(".project-card"));
 
-  // Create close button
-  const closeBtn = document.createElement("span");
-  closeBtn.classList.add("close-btn");
-  closeBtn.innerHTML = "&times;";
-  closeBtn.addEventListener("click", () => {
-    fullscreenOverlay.classList.remove("active");
-  });
+  // Gallery modal
+  const modal = document.getElementById("galleryModal");
+  if (!modal) return;
 
-  // Create image element for overlay
-  const fullscreenImg = document.createElement("img");
+  const mainImg = document.getElementById("galleryMainImage");
+  const titleEl = document.getElementById("galleryTitle");
+  const captionEl = document.getElementById("galleryCaption");
+  const counterEl = document.getElementById("galleryCounter");
+  const thumbsEl = document.getElementById("galleryThumbs");
+  const closeBtn = modal.querySelector(".gallery-close");
+  const prevBtn = modal.querySelector(".gallery-prev");
+  const nextBtn = modal.querySelector(".gallery-next");
 
-  // Add close button and image to overlay
-  fullscreenOverlay.appendChild(closeBtn);
-  fullscreenOverlay.appendChild(fullscreenImg);
+  let images = [];
+  let index = 0;
 
-  // Add overlay to body
-  document.body.appendChild(fullscreenOverlay);
-
-  // Add click event to all project images
-  const projectImages = document.querySelectorAll(
-    ".portfolio .project-image img"
-  );
-  projectImages.forEach((img) => {
-    img.addEventListener("click", () => {
-      // Set the source of the fullscreen image to the clicked image
-      fullscreenImg.src = img.src;
-
-      // Show the fullscreen overlay
-      fullscreenOverlay.classList.add("active");
+  function render() {
+    const item = images[index];
+    if (!item) return;
+    mainImg.src = item.src;
+    mainImg.alt = item.caption || "";
+    captionEl.textContent = item.caption || "";
+    counterEl.textContent = `${index + 1} / ${images.length}`;
+    thumbsEl.querySelectorAll("img").forEach((t, i) => {
+      t.classList.toggle("active", i === index);
     });
-  });
+  }
 
-  // Close overlay when clicking outside the image
-  fullscreenOverlay.addEventListener("click", (e) => {
-    if (e.target === fullscreenOverlay) {
-      fullscreenOverlay.classList.remove("active");
+  function openGallery(card) {
+    try {
+      images = JSON.parse(card.dataset.images || "[]");
+    } catch (e) {
+      images = [];
     }
-  });
-});
+    if (!images.length) return;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("imageModal");
-  const modalImage = document.getElementById("modalImage");
-  const modalDescription = document.getElementById("modalDescription");
-  const closeBtn = document.querySelector(".image-modal-close");
+    index = 0;
+    titleEl.textContent = card.dataset.title || "";
 
-  // Add click event to all project images
-  document.querySelectorAll(".project-image").forEach((image) => {
-    image.addEventListener("click", function () {
-      const src = this.dataset.src;
-      const description = this.dataset.description;
+    // Build thumbnails
+    thumbsEl.innerHTML = "";
+    images.forEach((item, i) => {
+      const thumb = document.createElement("img");
+      thumb.src = item.src;
+      thumb.alt = item.caption || "";
+      thumb.loading = "lazy";
+      thumb.addEventListener("click", () => {
+        index = i;
+        render();
+      });
+      thumbsEl.appendChild(thumb);
+    });
 
-      modalImage.src = src;
-      modalDescription.textContent = description;
-      modal.style.display = "block";
+    render();
+    modal.classList.add("open");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    modal.classList.remove("open");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function step(dir) {
+    index = (index + dir + images.length) % images.length;
+    render();
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => openGallery(card));
+    card.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        openGallery(card);
+      }
     });
   });
 
-  // Close modal when clicking on close button
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  closeBtn.addEventListener("click", closeGallery);
+  prevBtn.addEventListener("click", () => step(-1));
+  nextBtn.addEventListener("click", () => step(1));
 
-  // Close modal when clicking outside the image
   modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
+    if (e.target === modal) closeGallery();
   });
 
-  // Close modal with Escape key
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && modal.style.display === "block") {
-      modal.style.display = "none";
-    }
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const modal = document.getElementById("imageModal");
-  const closeButton = document.querySelector(".image-modal-close");
-
-  // Close modal when close button is clicked
-  closeButton.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  // Close modal when clicking outside the image
-  modal.addEventListener("click", (event) => {
-    if (event.target === modal) {
-      modal.style.display = "none";
-    }
-  });
-
-  // Optional: Close modal with Escape key
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && modal.style.display === "block") {
-      modal.style.display = "none";
-    }
+    if (!modal.classList.contains("open")) return;
+    if (e.key === "Escape") closeGallery();
+    else if (e.key === "ArrowLeft") step(-1);
+    else if (e.key === "ArrowRight") step(1);
   });
 });

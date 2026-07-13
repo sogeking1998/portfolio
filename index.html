@@ -153,79 +153,117 @@
             <div class="portfolio-content">
                 <div class="section web-projects">
                     <h3>My Work</h3>
-                    <div class="project-images">
-                        <div class="project-image" data-src="images/web1.jpg" data-description="University Extension Program Dashboard - First View">
-                            <img src="images/web1.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>University Extension Program Dashboard</h4>
+                    <div class="project-grid">
+                        <article class="project-card" data-category="web" tabindex="0" role="button" aria-label="View University Extension Program gallery"
+                            data-title="University Extension Program"
+                            data-tags="Web Application &middot; Dashboard"
+                            data-images='[
+                                {"src":"images/web1.jpg","caption":"Program dashboard — overview"},
+                                {"src":"images/web2.jpg","caption":"Dashboard — detailed metrics view"},
+                                {"src":"images/web3.jpg","caption":"Program management interface"},
+                                {"src":"images/web4.jpg","caption":"Integrated GIS mapping module"}
+                            ]'>
+                            <div class="project-card-media">
+                                <img src="images/web1.jpg" alt="University Extension Program" loading="lazy" />
+                                <span class="project-card-tag">Web Dev</span>
+                                <span class="project-card-count"><i class="fas fa-images"></i> 4</span>
+                                <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/web2.jpg" data-description="University Extension Program Dashboard - Second View">
-                            <img src="images/web2.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>University Extension Program Dashboard</h4>
+                            <div class="project-card-body">
+                                <h4>University Extension Program</h4>
+                                <p>Dashboard and management interface for tracking university extension programs, with an integrated GIS mapping module.</p>
+                                <div class="project-card-tech">
+                                    <span class="tech-chip"><i class="fab fa-react"></i> React</span>
+                                    <span class="tech-chip"><i class="fas fa-bolt"></i> Vite</span>
+                                    <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
+                                </div>
+                                <div class="project-card-foot">
+                                    <span class="project-card-tags">Web App &middot; Dashboard</span>
+                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/web3.jpg" data-description="University Extension Program Management Interface">
-                            <img src="images/web3.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>University Extension Program Management</h4>
+                        </article>
+                        <article class="project-card" data-category="gis" tabindex="0" role="button" aria-label="View Region 8 Irrigation Systems gallery"
+                            data-title="Region 8 Irrigation Systems GIS Map"
+                            data-tags="GIS &middot; Spatial Analysis"
+                            data-images='[
+                                {"src":"images/web5.jpg","caption":"Spatial analysis of irrigation networks"},
+                                {"src":"images/Web6.jpg","caption":"Detailed irrigation systems map"},
+                                {"src":"images/Web7.jpg","caption":"Comprehensive regional view"},
+                                {"src":"images/web8.jpg","caption":"Final analysis and output map"}
+                            ]'>
+                            <div class="project-card-media">
+                                <img src="images/web5.jpg" alt="Region 8 Irrigation Systems GIS Map" loading="lazy" />
+                                <span class="project-card-tag">GIS</span>
+                                <span class="project-card-count"><i class="fas fa-images"></i> 4</span>
+                                <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/web4.jpg" data-description="University Extension Program GIS Mapping">
-                            <img src="images/web4.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>University Extension Program GIS Map</h4>
-                            </div>
-                        </div>
-                        <div class="project-image" data-src="images/web5.jpg" data-description="Region 8 Irrigation Systems Spatial Analysis">
-                            <img src="images/web5.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
+                            <div class="project-card-body">
                                 <h4>Region 8 Irrigation Systems GIS Map</h4>
+                                <p>QGIS-based spatial analysis and mapping of irrigation systems across Region 8, from data capture to final output maps.</p>
+                                <div class="project-card-tech">
+                                    <span class="tech-chip"><i class="fas fa-leaf"></i> Leaflet</span>
+                                    <span class="tech-chip"><i class="fas fa-map-marked-alt"></i> QGIS</span>
+                                    <span class="tech-chip"><i class="fas fa-layer-group"></i> GeoJSON</span>
+                                </div>
+                                <div class="project-card-foot">
+                                    <span class="project-card-tags">GIS &middot; Spatial Analysis</span>
+                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/Web6.jpg" data-description="Region 8 Irrigation Systems Detailed Map">
-                            <img src="images/Web6.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>Region 8 Irrigation Systems GIS Map</h4>
+                        </article>
+                        <article class="project-card" data-category="web" tabindex="0" role="button" aria-label="View DAR Online CapDev Learning App gallery"
+                            data-title="DAR Online CapDev Learning App"
+                            data-tags="Full-Stack &middot; LMS"
+                            data-images='[
+                                {"src":"images/dar1.png","caption":"Home — welcome video and program intro"},
+                                {"src":"images/dar2.png","caption":"Learner dashboard — progress tracking"},
+                                {"src":"images/dar3.png","caption":"Courses organized by division"},
+                                {"src":"images/dar4.png","caption":"Co-pilot messaging and meeting booking"}
+                            ]'>
+                            <div class="project-card-media">
+                                <img src="images/dar1.png" alt="DAR Online CapDev Learning App" loading="lazy" />
+                                <span class="project-card-tag">Web Dev</span>
+                                <span class="project-card-count"><i class="fas fa-images"></i> 4</span>
+                                <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/Web7.jpg" data-description="Region 8 Irrigation Systems Comprehensive View">
-                            <img src="images/Web7.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>Region 8 Irrigation Systems GIS Map</h4>
+                            <div class="project-card-body">
+                                <h4>DAR Online CapDev Learning App</h4>
+                                <p>Learning management system for DAR newly-hired employees — courses, progress dashboard, certificates, and a built-in co-pilot messaging system.</p>
+                                <div class="project-card-tech">
+                                    <span class="tech-chip"><i class="fab fa-react"></i> React</span>
+                                    <span class="tech-chip"><i class="fas fa-bolt"></i> Vite</span>
+                                    <span class="tech-chip"><i class="fas fa-database"></i> Supabase</span>
+                                </div>
+                                <div class="project-card-foot">
+                                    <span class="project-card-tags">Full-Stack &middot; LMS</span>
+                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="project-image" data-src="images/web8.jpg" data-description="Region 8 Irrigation Systems Final Analysis">
-                            <img src="images/web8.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>Region 8 Irrigation Systems GIS Map</h4>
-                            </div>
-                        </div>
-                        <div class="project-image" data-src="images/web9.jpg" data-description="Ongoing Project Preview">
-                            <img src="images/web9.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>On-going Project</h4>
-                            </div>
-                        </div>
-                        <div class="project-image" data-src="images/web10.jpg" data-description="Ongoing Project Continuation">
-                            <img src="images/web10.jpg" alt="Website Project 1 - Second View" style="max-width: 100%; height: auto;" />
-                            <div class="project-description">
-                                <h4>On-going Project</h4>
-                            </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div id="imageModal" class="image-modal">
-        <button class="image-modal-close" aria-label="Close">
-            <span>&times;</span>
-        </button>
-        <div class="image-modal-content">
-            <img id="modalImage" src="" alt="Enlarged Image">
-            <div id="modalDescription" class="image-modal-description"></div>
+    <div id="galleryModal" class="gallery-modal" aria-hidden="true">
+        <button class="gallery-close" aria-label="Close gallery"><span>&times;</span></button>
+        <div class="gallery-modal-inner" role="dialog" aria-modal="true" aria-labelledby="galleryTitle">
+            <div class="gallery-stage">
+                <button class="gallery-nav gallery-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-main">
+                    <img id="galleryMainImage" src="" alt="" />
+                </div>
+                <button class="gallery-nav gallery-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="gallery-meta">
+                <div class="gallery-meta-text">
+                    <h3 id="galleryTitle"></h3>
+                    <p id="galleryCaption"></p>
+                </div>
+                <span id="galleryCounter" class="gallery-counter"></span>
+            </div>
+            <div id="galleryThumbs" class="gallery-thumbs"></div>
         </div>
     </div>
     
@@ -289,7 +327,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span> <span class="far fa-copyright"></span> 2024 All rights reserved.</span>
+        <span> <span class="far fa-copyright"></span> 2025 All rights reserved.</span>
     </footer>
 
     <script src="script.js"></script>
