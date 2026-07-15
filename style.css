@@ -432,18 +432,18 @@ section .title::after {
   background: crimson;
 }
 .skills-content .right .frontend::before {
-  width: 90%;
+  width: 100%;
 }
 .skills-content .right .backend::before {
-  width: 80%;
+  width: 100%;
 }
 .skills-content .right .qgis::before {
   width: 90%;
 }
-.skills-content .right .photoshop::before {
-  width: 70%;
+.skills-content .right .dbdesign::before {
+  width: 90%;
 }
-.skills-content .right .systems::before {
+.skills-content .right .api::before {
   width: 90%;
 }
 
