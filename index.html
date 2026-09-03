@@ -441,10 +441,33 @@
 </section>
 
     <!-- footer section start -->
-    <footer>
+    <footer style="position: relative;">
         <span> <span class="far fa-copyright"></span> 2025 All rights reserved.</span>
+        <span id="visitCounter" title="Total site visits" aria-hidden="true"
+              style="position: absolute; right: 12px; bottom: 8px; font-size: 9px; line-height: 1; letter-spacing: 0.5px; color: rgba(255, 255, 255, 0.22); font-family: 'Quicksand', sans-serif; user-select: none;"></span>
     </footer>
 
     <script src="script.js"></script>
+    <!-- Tiny visit counter (Abacus — free, no signup). Increments once per
+         browser session so refreshes don't inflate the count. Fails silently. -->
+    <script>
+      (function () {
+        var el = document.getElementById("visitCounter");
+        if (!el) return;
+        var base = "https://abacus.jasoncameron.dev/";
+        var ns = "sogeking1998-portfolio", key = "visits";
+        var counted = false;
+        try { counted = sessionStorage.getItem("visitCounted") === "1"; } catch (e) {}
+        fetch(base + (counted ? "get" : "hit") + "/" + ns + "/" + key)
+          .then(function (r) { return r.json(); })
+          .then(function (d) {
+            if (d && typeof d.value === "number") {
+              el.textContent = d.value.toLocaleString();
+              try { sessionStorage.setItem("visitCounted", "1"); } catch (e) {}
+            }
+          })
+          .catch(function () {});
+      })();
+    </script>
 </body>
 </html>
