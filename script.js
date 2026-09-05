@@ -160,8 +160,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   cards.forEach((card) => {
-    card.addEventListener("click", () => openGallery(card));
+    card.addEventListener("click", (e) => {
+      // Let real links inside the card (e.g. "Visit live site") behave normally
+      if (e.target.closest("a")) return;
+      openGallery(card);
+    });
     card.addEventListener("keydown", (e) => {
+      // Don't hijack keyboard activation when focus is on a link inside the card
+      if (e.target.closest("a")) return;
       if (e.key === "Enter" || e.key === " ") {
         e.preventDefault();
         openGallery(card);

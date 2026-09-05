@@ -1159,6 +1159,42 @@ footer span a:hover {
   border-color: rgba(46, 213, 115, 0.28);
 }
 
+/* "Visit live site" link on cards for deployed projects */
+.portfolio .project-card-live {
+  position: relative;
+  z-index: 2;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+  padding: 8px 14px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+  color: var(--color-secondary);
+  background: rgba(46, 213, 115, 0.09);
+  border: 1px solid rgba(46, 213, 115, 0.3);
+  border-radius: 9px;
+  transition: background 0.3s var(--transition-smooth),
+    color 0.3s var(--transition-smooth),
+    border-color 0.3s var(--transition-smooth),
+    transform 0.3s var(--transition-smooth);
+}
+
+.portfolio .project-card-live i {
+  font-size: 12px;
+}
+
+.portfolio .project-card-live:hover,
+.portfolio .project-card-live:focus-visible {
+  background: linear-gradient(135deg, var(--color-secondary), #1dd1a1);
+  border-color: transparent;
+  color: #07160f;
+  transform: translateY(-1px);
+}
+
 .portfolio .project-card-foot {
   margin-top: auto;
   display: flex;
