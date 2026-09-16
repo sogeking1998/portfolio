@@ -85,9 +85,9 @@ $(".menu-btn").click(function () {
   });
 });
 
-// ---- My Work: category filters + per-project gallery ----
+// ---- My Work: per-project gallery ----
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = Array.from(document.querySelectorAll(".project-card"));
+  const cards = Array.from(document.querySelectorAll(".project-card[data-images]"));
 
   // Gallery modal
   const modal = document.getElementById("galleryModal");

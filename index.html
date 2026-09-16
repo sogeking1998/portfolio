@@ -205,12 +205,48 @@
         </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section class="portfolio" id="portfolio" aria-labelledby="work-title">
         <div class="max-width">
             <div class="portfolio-content">
                 <div class="section web-projects">
-                    <h3>My Work</h3>
+                    <header class="work-header">
+                        <div>
+                            <span class="work-eyebrow"><span></span> SELECTED PROJECTS</span>
+                            <h2 id="work-title">My Work<span>.</span></h2>
+                        </div>
+                        <p>From everyday workflows to spatial insights.<br>Thoughtful interfaces. Practical solutions.</p>
+                    </header>
                     <div class="project-grid">
+                        <article class="project-card project-card-local" data-category="web" tabindex="0" role="button" aria-label="View Little Studio AI Video Generator gallery"
+                            data-title="Little Studio — AI Video Generator"
+                            data-images='[
+                                {"src":"images/AI1.png","caption":"Little Studio — screenshot 1"},
+                                {"src":"images/AI2.png","caption":"Little Studio — screenshot 2"},
+                                {"src":"images/AI3.png","caption":"Little Studio — screenshot 3"},
+                                {"src":"images/AI4.png","caption":"Little Studio — screenshot 4"},
+                                {"src":"images/AI5.png","caption":"Little Studio — screenshot 5"}
+                            ]'>
+                            <div class="project-card-media">
+                                <img src="images/AI1.png" alt="Little Studio AI Video Generator screenshot" loading="lazy" />
+                                <span class="project-card-tag">AI &amp; Automation</span>
+                                <span class="project-card-count"><i class="fas fa-images" aria-hidden="true"></i> 5</span>
+                                <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span></div>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>01 / 10</span></div>
+                                <h4 id="little-studio-title">Little Studio &mdash; AI Video Generator</h4>
+                                <p>A local video creation studio that turns a topic into a narrated short video. Combines Gemini scripts, voiceovers, timed captions, stock visuals, and synthesized music into a downloadable MP4, with controls for each stage.</p>
+                                <div class="project-card-tech">
+                                    <span class="tech-chip"><i class="fas fa-code" aria-hidden="true"></i> Next.js</span>
+                                    <span class="tech-chip"><i class="fab fa-python" aria-hidden="true"></i> Python</span>
+                                    <span class="tech-chip"><i class="fas fa-film" aria-hidden="true"></i> FFmpeg</span>
+                                </div>
+                                <div class="project-card-foot">
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">NOT DEPLOYED</span>
+                                </div>
+                            </div>
+                        </article>
                         <article class="project-card" data-category="web" tabindex="0" role="button" aria-label="View DAR Online CapDev Learning App gallery"
                             data-title="DAR Online CapDev Learning App"
                             data-tags="Full-Stack &middot; LMS"
@@ -228,6 +264,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>02 / 10</span></div>
                                 <h4>DAR Online CapDev Learning App</h4>
                                 <p>Learning management system for DAR newly-hired employees — courses, progress dashboard, certificates, and a built-in co-pilot messaging system.</p>
                                 <div class="project-card-tech">
@@ -236,8 +273,8 @@
                                     <span class="tech-chip"><i class="fas fa-database"></i> Supabase</span>
                                 </div>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Full-Stack &middot; LMS</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">SCREENSHOTS</span>
                                 </div>
                             </div>
                         </article>
@@ -258,6 +295,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>03 / 10</span></div>
                                 <h4>Aurora Hotel PMS</h4>
                                 <p>A complete hotel platform — a guest-facing booking site (rooms, availability, and direct reservations) backed by a role-aware staff PMS with a live dashboard, reservation calendar, folios and invoicing, housekeeping, payments, and reports.</p>
                                 <div class="project-card-tech">
@@ -265,10 +303,9 @@
                                     <span class="tech-chip"><i class="fas fa-database"></i> PostgreSQL</span>
                                     <span class="tech-chip"><i class="fas fa-chart-line"></i> Recharts</span>
                                 </div>
-                                <a class="project-card-live" href="https://aurora-hotel-pms.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Aurora Hotel demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">PMS &middot; Full-Stack</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <a class="project-card-live" href="https://aurora-hotel-pms.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Aurora Hotel demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
                             </div>
                         </article>
@@ -289,6 +326,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>04 / 10</span></div>
                                 <h4>Hara Table — Restaurant Site</h4>
                                 <p>A responsive landing site for a Tacloban City kitchen &amp; bar — a full-bleed hero, a tabbed menu with photography and prices, a photo gallery, opening hours with an embedded map, and a validating reservation-inquiry form.</p>
                                 <div class="project-card-tech">
@@ -296,10 +334,9 @@
                                     <span class="tech-chip"><i class="fas fa-bolt"></i> Vite</span>
                                     <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind</span>
                                 </div>
-                                <a class="project-card-live" href="https://hara-table.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Hara Table demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Web &middot; Restaurant</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <a class="project-card-live" href="https://hara-table.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Hara Table demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
                             </div>
                         </article>
@@ -320,6 +357,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>05 / 10</span></div>
                                 <h4>Beasties Veterinary Clinic</h4>
                                 <p>A warm marketing site for a neighborhood veterinary clinic — a full-bleed hero, an about section, a photo-gallery carousel, a categorized services grid, and an appointment-request form backed by a validating API route.</p>
                                 <div class="project-card-tech">
@@ -327,10 +365,9 @@
                                     <span class="tech-chip"><i class="fas fa-code"></i> TypeScript</span>
                                     <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind</span>
                                 </div>
-                                <a class="project-card-live" href="https://beasties-veterinary-clinic.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Beasties Veterinary Clinic demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Web &middot; Veterinary</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <a class="project-card-live" href="https://beasties-veterinary-clinic.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Beasties Veterinary Clinic demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
                             </div>
                         </article>
@@ -350,6 +387,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>06 / 10</span></div>
                                 <h4>StockPilot — Inventory Manager</h4>
                                 <p>A small-business inventory manager where stock is never edited directly — every quantity is derived from an auditable ledger of stock-in/out movements. Live quantities with low-stock alerts, a summary dashboard with a Chart.js top-movers chart, and row-level-secured per-user data.</p>
                                 <div class="project-card-tech">
@@ -357,10 +395,9 @@
                                     <span class="tech-chip"><i class="fas fa-database"></i> Supabase</span>
                                     <span class="tech-chip"><i class="fas fa-chart-pie"></i> Chart.js</span>
                                 </div>
-                                <a class="project-card-live" href="https://stockpilot-lac.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the StockPilot demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Inventory &middot; Dashboard</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <a class="project-card-live" href="https://stockpilot-lac.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the StockPilot demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
                             </div>
                         </article>
@@ -380,6 +417,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>07 / 10</span></div>
                                 <h4>University Extension Program</h4>
                                 <p>Dashboard and management interface for tracking university extension programs, with an integrated GIS mapping module.</p>
                                 <div class="project-card-tech">
@@ -388,8 +426,8 @@
                                     <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
                                 </div>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Web App &middot; Dashboard</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">SCREENSHOTS</span>
                                 </div>
                             </div>
                         </article>
@@ -409,6 +447,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>08 / 10</span></div>
                                 <h4>Region 8 Irrigation Systems GIS Map</h4>
                                 <p>QGIS-based spatial analysis and mapping of irrigation systems across Region 8, from data capture to final output maps.</p>
                                 <div class="project-card-tech">
@@ -417,8 +456,8 @@
                                     <span class="tech-chip"><i class="fas fa-layer-group"></i> GeoJSON</span>
                                 </div>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">GIS &middot; Spatial Analysis</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">SCREENSHOTS</span>
                                 </div>
                             </div>
                         </article>
@@ -438,6 +477,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>09 / 10</span></div>
                                 <h4>SPLIT LEGAL — Case-Management System</h4>
                                 <p>Information system for a regional agrarian-reform legal office — KPI tiles, a resolution gauge, and nature-of-case charts served by a serverless API, wrapped in a custom editorial UI. Shown with sample data; the live system runs privately to protect sensitive records.</p>
                                 <div class="project-card-tech">
@@ -446,8 +486,8 @@
                                     <span class="tech-chip"><i class="fab fa-js"></i> JavaScript</span>
                                 </div>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Dashboard &middot; Data Viz</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">SCREENSHOTS</span>
                                 </div>
                             </div>
                         </article>
@@ -467,6 +507,7 @@
                                 <div class="project-card-overlay"><span class="project-card-cta">View Gallery <i class="fas fa-arrow-right"></i></span></div>
                             </div>
                             <div class="project-card-body">
+                                <div class="project-index"><span>PROJECT</span><span>10 / 10</span></div>
                                 <h4>E-Wedding Invitation</h4>
                                 <p>One of several electronic invitations I've designed — a mobile-first wedding invite with an animated hero, live countdown, RSVP form, venue map, and a coverflow photo gallery, built in vanilla HTML, CSS, and JavaScript. Shown with placeholder stock photos in place of the couple's own images.</p>
                                 <div class="project-card-tech">
@@ -475,8 +516,8 @@
                                     <span class="tech-chip"><i class="fas fa-images"></i> Swiper</span>
                                 </div>
                                 <div class="project-card-foot">
-                                    <span class="project-card-tags">Web &middot; Interactive</span>
-                                    <span class="project-card-arrow"><i class="fas fa-arrow-right"></i></span>
+                                    <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+                                    <span class="project-gallery-note">SCREENSHOTS</span>
                                 </div>
                             </div>
                         </article>
