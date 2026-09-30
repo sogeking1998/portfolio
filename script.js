@@ -86,6 +86,7 @@ $(".menu-btn").click(function () {
 // ---- My Work: per-project gallery ----
 document.addEventListener("DOMContentLoaded", () => {
   const cards = Array.from(document.querySelectorAll(".project-card[data-images]"));
+  const certificateButtons = Array.from(document.querySelectorAll(".certificate-preview[data-title]"));
 
   // Gallery modal
   const modal = document.getElementById("galleryModal");
@@ -96,12 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const captionEl = document.getElementById("galleryCaption");
   const counterEl = document.getElementById("galleryCounter");
   const thumbsEl = document.getElementById("galleryThumbs");
+  const descriptionEl = document.getElementById("galleryDescription");
+  const technologiesEl = document.getElementById("galleryTechnologies");
   const closeBtn = modal.querySelector(".gallery-close");
   const prevBtn = modal.querySelector(".gallery-prev");
   const nextBtn = modal.querySelector(".gallery-next");
 
   let images = [];
   let index = 0;
+  let lastTrigger = null;
 
   function render() {
     const item = images[index];
@@ -124,7 +128,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!images.length) return;
 
     index = 0;
+    lastTrigger = card;
     titleEl.textContent = card.dataset.title || "";
+    const description = card.querySelector(".project-card-body > p");
+    descriptionEl.textContent = description ? description.textContent.trim() : "";
+    technologiesEl.replaceChildren();
+    card.querySelectorAll(".project-card-tech .tech-chip").forEach((chip) => {
+      const technology = document.createElement("span");
+      technology.className = "gallery-technology";
+      technology.textContent = chip.textContent.trim();
+      technologiesEl.appendChild(technology);
+    });
 
     // Build thumbnails
     thumbsEl.innerHTML = "";
@@ -141,15 +155,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     render();
+    modal.classList.remove("certificate-modal");
+    modal.classList.add("project-modal");
     modal.classList.add("open");
     modal.setAttribute("aria-hidden", "false");
     document.body.style.overflow = "hidden";
+    closeBtn.focus();
+  }
+
+  function openCertificate(button) {
+    const image = button.querySelector("img");
+    if (!image) return;
+
+    images = [{ src: image.src, caption: button.dataset.caption || "" }];
+    index = 0;
+    lastTrigger = button;
+    titleEl.textContent = button.dataset.title || "Certificate";
+    thumbsEl.innerHTML = "";
+    render();
+    modal.classList.remove("project-modal");
+    modal.classList.add("open", "certificate-modal");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    closeBtn.focus();
   }
 
   function closeGallery() {
-    modal.classList.remove("open");
+    modal.classList.remove("open", "certificate-modal", "project-modal");
     modal.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
+    if (lastTrigger) lastTrigger.focus();
   }
 
   function step(dir) {
@@ -171,6 +206,10 @@ document.addEventListener("DOMContentLoaded", () => {
         openGallery(card);
       }
     });
+  });
+
+  certificateButtons.forEach((button) => {
+    button.addEventListener("click", () => openCertificate(button));
   });
 
   closeBtn.addEventListener("click", closeGallery);

@@ -53,6 +53,7 @@
                 <li><a href="#services" class="menu-btn">Services</a></li>
                 <li><a href="#skills" class="menu-btn">Skills</a></li>
                 <li><a href="#portfolio" class="menu-btn">My Work</a></li>
+                <li><a href="#certificates" class="menu-btn">Certificates</a></li>
                 <li><a href="#contact" class="menu-btn">Contact</a></li>
             </ul>
             <div class="menu-btn">
@@ -243,6 +244,7 @@
                                     <span class="tech-chip"><i class="fas fa-brain" aria-hidden="true"></i> Gemini API</span>
                                 </div>
                                 <div class="project-card-foot">
+                                    <a class="project-card-live" href="https://github.com/sogeking1998/video-generator" target="_blank" rel="noopener noreferrer" aria-label="View Little Studio source code on GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i> View Code</a>
                                     <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                                     <span class="project-gallery-note">NOT DEPLOYED</span>
                                 </div>
@@ -305,6 +307,7 @@
                                     <span class="tech-chip"><i class="fas fa-chart-line"></i> Recharts</span>
                                 </div>
                                 <div class="project-card-foot">
+                                    <a class="project-card-live" href="https://github.com/sogeking1998/aurora-hotel-pms" target="_blank" rel="noopener noreferrer" aria-label="View Aurora Hotel PMS source code on GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i> View Code</a>
                                     <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                                     <a class="project-card-live" href="https://aurora-hotel-pms.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Aurora Hotel demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
@@ -336,6 +339,7 @@
                                     <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind</span>
                                 </div>
                                 <div class="project-card-foot">
+                                    <a class="project-card-live" href="https://github.com/sogeking1998/hara-table" target="_blank" rel="noopener noreferrer" aria-label="View Hara Table source code on GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i> View Code</a>
                                     <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                                     <a class="project-card-live" href="https://hara-table.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Hara Table demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
@@ -367,6 +371,7 @@
                                     <span class="tech-chip"><i class="fas fa-wind"></i> Tailwind</span>
                                 </div>
                                 <div class="project-card-foot">
+                                    <a class="project-card-live" href="https://github.com/sogeking1998/beasties-veterinary-clinic" target="_blank" rel="noopener noreferrer" aria-label="View Beasties Veterinary Clinic source code on GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i> View Code</a>
                                     <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                                     <a class="project-card-live" href="https://beasties-veterinary-clinic.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the Beasties Veterinary Clinic demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
@@ -397,6 +402,7 @@
                                     <span class="tech-chip"><i class="fas fa-chart-pie"></i> Chart.js</span>
                                 </div>
                                 <div class="project-card-foot">
+                                    <a class="project-card-live" href="https://github.com/sogeking1998/stockpilot" target="_blank" rel="noopener noreferrer" aria-label="View StockPilot source code on GitHub (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i> View Code</a>
                                     <span class="project-gallery-label">View gallery <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
                                     <a class="project-card-live" href="https://stockpilot-lac.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Visit the StockPilot demo (opens in a new tab)"><i class="fas fa-external-link-alt"></i> Visit Demo</a>
                                 </div>
@@ -544,10 +550,82 @@
                 </div>
                 <span id="galleryCounter" class="gallery-counter"></span>
             </div>
+            <section class="gallery-project-details" id="galleryProjectDetails" aria-label="Project information">
+                <div>
+                    <h4>About this project</h4>
+                    <p id="galleryDescription"></p>
+                </div>
+                <div>
+                    <h4>Technology stack</h4>
+                    <div id="galleryTechnologies" class="gallery-technologies"></div>
+                </div>
+            </section>
             <div id="galleryThumbs" class="gallery-thumbs"></div>
         </div>
     </div>
 
+    <section class="certificates" id="certificates" aria-labelledby="certificates-title">
+        <div class="certificates-shell">
+            <header class="certificates-header">
+                <div>
+                    <span class="certificates-eyebrow"><span></span> LEARNING &amp; CREDENTIALS</span>
+                    <h2 id="certificates-title">Certificates<span>.</span></h2>
+                    <p>Selected training in web development, programming, cybersecurity, networking, and design.</p>
+                </div>
+            </header>
+            <div class="certificates-grid">
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="2022 Complete Python Bootcamp From Zero to Hero in Python" data-caption="Udemy · Completed January 26, 2022 · 22 hours" aria-label="Enlarge 2022 Complete Python Bootcamp certificate">
+                        <img src="images/certificates/certificate-01.jpg" alt="Udemy certificate preview for 2022 Complete Python Bootcamp From Zero to Hero in Python" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">Udemy</span><h3>2022 Complete Python Bootcamp From Zero to Hero in Python</h3><p>Completed January 26, 2022 <span>·</span> 22 hours</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="Learn Python &amp; Ethical Hacking From Scratch" data-caption="Udemy · Completed January 19, 2023 · 25 hours" aria-label="Enlarge Learn Python and Ethical Hacking From Scratch certificate">
+                        <img src="images/certificates/certificate-02.jpg" alt="Udemy certificate preview for Learn Python and Ethical Hacking From Scratch" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">Udemy</span><h3>Learn Python &amp; Ethical Hacking From Scratch</h3><p>Completed January 19, 2023 <span>·</span> 25 hours</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="The Web Developer Bootcamp 2022" data-caption="Udemy · Completed February 18, 2022 · 63.5 hours" aria-label="Enlarge The Web Developer Bootcamp 2022 certificate">
+                        <img src="images/certificates/certificate-03.jpg" alt="Udemy certificate preview for The Web Developer Bootcamp 2022" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">Udemy</span><h3>The Web Developer Bootcamp 2022</h3><p>Completed February 18, 2022 <span>·</span> 63.5 hours</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="Introduction to IoT" data-caption="Cisco Networking Academy · Completed January 16, 2021" aria-label="Enlarge Introduction to IoT certificate">
+                        <img src="images/certificates/certificate-04.jpg" alt="Cisco Networking Academy certificate preview for Introduction to IoT" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">Cisco Networking Academy</span><h3>Introduction to IoT</h3><p>Completed January 16, 2021</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="Introduction to CSS" data-caption="TESDA · Completed December 4, 2024" aria-label="Enlarge Introduction to CSS certificate">
+                        <img src="images/certificates/certificate-05.jpg" alt="TESDA certificate preview for Introduction to CSS" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">TESDA</span><h3>Introduction to CSS</h3><p>Completed December 4, 2024</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="Installing and Configuring Computer Systems" data-caption="TESDA · Completed July 17, 2025" aria-label="Enlarge Installing and Configuring Computer Systems certificate">
+                        <img src="images/certificates/certificate-06.jpg" alt="TESDA certificate preview for Installing and Configuring Computer Systems" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">TESDA</span><h3>Installing and Configuring Computer Systems</h3><p>Completed July 17, 2025</p></div>
+                </article>
+                <article class="certificate-card">
+                    <button type="button" class="certificate-preview" data-title="Introduction to Visual Graphic Design" data-caption="TESDA · Completed December 4, 2024" aria-label="Enlarge Introduction to Visual Graphic Design certificate">
+                        <img src="images/certificates/certificate-07.jpg" alt="TESDA certificate preview for Introduction to Visual Graphic Design" loading="lazy">
+                        <span class="certificate-open"><i class="fas fa-external-link-alt" aria-hidden="true"></i></span>
+                    </button>
+                    <div class="certificate-info"><span class="certificate-provider">TESDA</span><h3>Introduction to Visual Graphic Design</h3><p>Completed December 4, 2024</p></div>
+                </article>
+            </div>
+        </div>
+    </section>
 
     <!-- contact section start -->
 <section class="contact" id="contact">
