@@ -41,6 +41,7 @@ $(".menu-btn").click(function () {
     strings: [
       "Freelancer",
       "Web Developer",
+      "Mobile App Developer",
       "GIS Specialist",
     ],
     typeSpeed: 100,
@@ -52,6 +53,7 @@ $(".menu-btn").click(function () {
     strings: [
       "Freelancer",
       "Web Developer",
+      "Mobile App Developer",
       "GIS Specialist",
     ],
     typeSpeed: 100,
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       images = JSON.parse(card.dataset.images || "[]");
     } catch (e) {
-      images = [];
+      images = []; 
     }
     if (!images.length) return;
 
